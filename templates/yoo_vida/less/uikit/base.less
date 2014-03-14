@@ -1,0 +1,105 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Base
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@base-body-background:							@global-background;
+@base-body-font-family:							'Open Sans';
+@base-body-font-size:							@global-font-size;
+@base-body-line-height:							@global-line-height;
+@base-body-color:								@global-color;
+@base-link-color:								@global-link-color;
+@base-link-hover-color:							@global-link-hover-color;
+@base-ins-background:							fade(@global-light-background, 5%);
+@base-ins-color:								@global-color;
+@base-mark-background:							#fadf46;
+@base-mark-color:								@global-color;
+@base-selection-background:						lighten(#96dfe6, 20%);
+@base-selection-color:							@global-color;
+@base-margin-vertical:							@global-margin;
+@base-heading-font-family:						'Open Sans';
+@base-heading-color:							@global-dark-color;
+@base-heading-margin-top:						@global-large-margin;
+@base-h1-font-size:								round(@global-font-size * 2.66);
+@base-h1-line-height:							round(@base-h1-font-size * 1.25);
+@base-h2-font-size:								round(@global-font-size * 2.33);
+@base-h2-line-height:							round(@base-h2-font-size * 1.28);
+@base-h3-font-size:								round(@global-font-size * 2);
+@base-h3-line-height:							round(@base-h3-font-size * 1.33);
+@base-h4-font-size:								round(@global-font-size * 1.6);
+@base-h4-line-height:							round(@base-h4-font-size * 1.25);
+@base-h5-font-size:								round(@global-font-size * 1.33);
+@base-h5-line-height:							round(@base-h5-font-size * 1.3);
+@base-h6-font-size:								round(@global-font-size * 1.06);
+@base-h6-line-height:							round(@base-h6-font-size * 1.37);
+@base-hr-border:								@global-border;
+@base-blockquote-border:						@global-border;
+@base-blockquote-small-color:					@global-muted-color;
+@base-blockquote-font-size:						round(@global-font-size * 1.2);
+@base-blockquote-line-height:					round(@base-blockquote-font-size * 1.66);
+@base-code-font-size:							round(@global-font-size * 0.85);
+@base-pre-background:							@global-light-background;
+@base-pre-color:								@global-color;
+@base-pre-font-size:							round(@global-font-size * 0.85);
+@base-pre-line-height:							round(@base-pre-font-size * 1.5);
+
+//
+// New
+//
+
+@base-heading-margin-bottom:					20px;
+@base-pre-border:								fadein(@global-light-background, 5%);
+
+
+// Body
+// ==========================================================================
+
+.hook-base-body() {}
+
+
+// Headings
+// ==========================================================================
+
+h1, h2, h3, h4, h5, h6 { margin-bottom: @base-heading-margin-bottom; }
+
+
+// Code and preformatted text
+// ==========================================================================
+
+.hook-base-code() {}
+
+.hook-base-code-reset() {}
+
+.hook-base-pre() { border: 1px solid @base-pre-border; }
+
+// Miscellaneous
+// ========================================================================
+
+.hook-base-misc() {
+
+	// Text-level semantics
+	// ==========================================================================
+
+	//
+	// Links
+	//
+
+	a {
+		-webkit-transition: background-color .15s ease-in-out, color .15s ease-in-out;
+		transition: background-color .15s ease-in-out, color .15s ease-in-out;
+	}
+
+	a:hover { text-decoration: none; }
+
+	a:active {
+		-webkit-transition: background-color .03s ease-in, color .03s ease-in;
+		transition: background-color .03s ease-in, color .03s ease-in;
+	}
+
+}

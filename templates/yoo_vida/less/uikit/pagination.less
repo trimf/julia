@@ -1,0 +1,63 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Pagination
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@pagination-line-height:							@global-line-height;
+@pagination-background:								@global-transparent-background;
+@pagination-color:									@global-color;
+@pagination-hover-background:						@global-transparent-background;
+@pagination-hover-color:							@global-muted-color;
+@pagination-onclick-background:						@global-transparent-background;
+@pagination-onclick-color:							darken(@global-muted-color, 20%);
+@pagination-active-background:						@global-default-background;
+@pagination-active-color:							@global-contrast-color;
+@pagination-disabled-background:					@global-light-background;
+@pagination-disabled-color:							@global-muted-color;
+
+//
+// New
+//
+
+@pagination-border-radius:							@global-border-radius;
+@pagination-border: 								@global-transparent-background;
+@pagination-hover-border-color: 					@global-border;
+@pagination-active-border-color:					fade(@global-border, 15%);
+
+
+// Component
+// ==========================================================================
+
+.hook-pagination-item() { 
+	border-radius: @pagination-border-radius;
+	border: 3px solid @pagination-border;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+
+// Items
+// ==========================================================================
+
+.hook-pagination-link() {}
+
+.hook-pagination-link-hover() { border-color: @pagination-hover-border-color; }
+
+.hook-pagination-link-active() { border-color: @pagination-active-border-color; }
+
+//
+// Active
+//
+
+.hook-pagination-active() {}
+
+//
+// Disabled
+//
+
+.hook-pagination-disabled() {}

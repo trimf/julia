@@ -1,0 +1,151 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Panel
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@panel-title-margin-bottom:						@global-margin;
+@panel-title-font-size:							round(@global-font-size * 2);
+@panel-title-line-height:						round(@panel-title-font-size * 1.33);
+@panel-title-color:								@global-dark-color;
+@panel-box-padding:								30px;
+@panel-box-background:							@global-background;
+@panel-box-color:								@global-color;
+@panel-box-title-color:							@global-dark-color;
+@panel-box-badge-right:							@panel-box-badge-top;
+@panel-box-primary-background:					@global-light-background;
+@panel-box-primary-color:						@global-color;
+@panel-box-primary-title-color:					@global-dark-color;
+@panel-box-secondary-background:				@global-background;
+@panel-box-secondary-title-color:				@global-dark-color;
+@panel-header-title-border:						@global-border;
+@panel-header-title-color:						@global-dark-color;
+@panel-divider-gutter:							@global-grid-gutter;
+@panel-divider-large-gutter:					@global-grid-large-gutter;
+@panel-divider-border:							@global-border;
+
+//
+// New
+//
+
+@panel-border:									@global-border;
+@panel-box-secondary-border-top:				@global-default-background;
+@panel-header-padding: 							30px;
+@panel-box-nav-side-open-parent-border:			@global-transparent-background;
+
+
+// Component
+// ==========================================================================
+
+
+// Sub-object: `uk-panel-title`
+// ==========================================================================
+
+.hook-panel-title() {}
+
+
+// Sub-object: `uk-panel-badge`
+// ==========================================================================
+
+.hook-panel-badge() {}
+
+
+// Modifier: `uk-panel-box`
+// ==========================================================================
+
+.hook-panel-box() { border: 1px solid @panel-border; }
+
+
+//
+// Sub-modifier: `uk-panel-box-primary`
+//
+
+.hook-panel-box-primary() {}
+
+//
+// Sub-modifier: `uk-panel-box-secondary`
+//
+
+.hook-panel-box-secondary() {
+
+	&:before {
+		display: block;
+		position: absolute;
+		top: -1px;
+		right: 0;
+		left: -1px;
+		height: 5px;
+		background: @panel-box-secondary-border-top;
+	}
+
+}
+
+
+// Modifier: `uk-panel-header`
+// ==========================================================================
+
+.hook-panel-header() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-panel-misc() {
+
+	// Modifier: `uk-panel-box`
+	// ==========================================================================
+
+	//
+	// Nav in panel
+	//
+
+	.uk-panel-box .uk-nav-side { 
+		padding-left: @panel-box-padding;
+		padding-right: @panel-box-padding;
+	}
+
+	.uk-panel-box .uk-nav-side > li {
+		margin-left: -@panel-box-padding;
+		margin-right: -@panel-box-padding;
+	}
+
+	.uk-panel-box .uk-nav-side li a {
+		margin-left: @panel-box-padding;
+		margin-right: @panel-box-padding;
+	}
+
+	.uk-panel-box .uk-open + li a { border-top: none; }
+
+	.uk-panel-box .uk-nav-side .uk-nav-header { padding-left: @panel-box-padding; }
+
+	.uk-panel-box .uk-nav-side .uk-nav-sub { 
+		padding-left: 0;
+		background: none; 
+		border: none;
+	}
+
+	.uk-panel-box .uk-open.uk-parent {
+
+		background: @nav-sub-background;
+
+		> a { 
+			border-top-color: @panel-box-nav-side-open-parent-border;
+			border-bottom: 1px solid @nav-border;
+		}
+
+	}
+
+	.uk-panel-box .uk-nav li:last-child .uk-nav-sub { border: none; }
+
+	// Modifier: `uk-panel-header`
+	// ==========================================================================
+
+	.hook-panel-header() {}
+
+	.uk-panel.uk-panel-header { padding: @panel-header-padding; }
+
+}

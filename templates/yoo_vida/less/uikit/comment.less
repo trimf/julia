@@ -1,0 +1,68 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Comment
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@comment-header-margin-bottom:						@global-margin;
+@comment-avatar-margin-right:						@global-margin;
+@comment-title-font-size:							round(@global-font-size * 1.14);
+@comment-title-line-height:							round(@comment-title-font-size * 1.37);
+@comment-meta-color:								@global-muted-color;
+@comment-meta-font-size:							round(@global-font-size * 0.78);
+@comment-meta-line-height:							round(@comment-meta-font-size * 1.45);
+@comment-list-margin-top:							30px;
+
+//
+// New
+//
+
+@comment-padding-bottom:							30px;
+@comment-avatar-border-radius:						50%;
+@comment-border:									@global-border;
+
+
+// Component
+// ==========================================================================
+
+// Sub-object `uk-comment-header`
+// ==========================================================================
+
+.hook-comment-header() { padding-bottom: 10px; }
+
+
+// Sub-object `uk-comment-avatar`
+// ==========================================================================
+
+.hook-comment-avatar() { border-radius: @comment-avatar-border-radius; }
+
+
+// Sub-object `uk-comment-title`
+// ==========================================================================
+
+.hook-comment-title() {}
+
+
+// Sub-object `uk-comment-meta`
+// ==========================================================================
+
+.hook-comment-meta() {}
+
+// Miscellaneous
+// ========================================================================
+
+.hook-comment-misc() {
+
+	// Component
+	// ======================================================================
+
+	.uk-comment { 
+		padding-bottom: @comment-padding-bottom;
+		border-bottom: 1px solid @comment-border;
+	}
+
+}

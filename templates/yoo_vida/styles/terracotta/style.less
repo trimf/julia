@@ -1,0 +1,90 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,300';
+@import 'https://fonts.googleapis.com/css?family=Fjalla+One';
+
+// Variables
+// ========================================================================
+
+//
+// Typography
+//
+
+@global-color: 										#7a7a7a;
+@global-muted-color: 								#bababa;
+@global-link-color: 								#ea7158;
+
+//
+// Backgrounds & Borders
+//
+
+@global-default-background: 					#ea7158;
+@global-primary-background: 						#26a3ba;
+@global-success-background: 						#26b685;
+@global-warning-background: 						#fe7f2d;
+@global-danger-background: 							#fe482d;
+
+//
+// Alert
+//
+
+@alert-color: 										@global-default-background;
+@alert-background: 									fade(@global-default-background, 5%);
+
+
+// Theme Variables
+// ==========================================================================
+
+@theme_global-body-style: 							'terracotta';
+
+//
+// Navbar
+//
+
+@theme_navbar-nav-border-1-color: 					#f3a865;
+@theme_navbar-nav-border-2-color:					#f1dc5d;
+@theme_navbar-nav-border-3-color:					#c1db7a;
+@theme_navbar-nav-border-4-color:					#9cd874;
+@theme_navbar-nav-border-5-color:					#76c3df;
+@theme_navbar-nav-border-6-color:					#7375e1;
+
+//
+// Container Border
+//
+
+@theme_container-border-right: 						@global-border;
+
+//
+// Article
+//
+
+@theme_article-meta-background: 					#cccccc;
+@theme-article-date:								@theme_article-meta-background;
+
+//
+// Sidebar Dark
+//
+
+@theme_sidebar-dark-fallback-background: 			#f2f2f2;
+@theme_sidebar-dark-gradient-left-background:		#f2f2f2;
+@theme_sidebar-dark-gradient-right-background:		@theme_sidebar-dark-gradient-left-background;
+
+@theme_sidebar-dark-vertical-border-width: 			1px;
+
+@theme_sidebar-dark-panel-box-background:			#fcfcfc;
+@theme_sidebar-dark-panel-box-primary-background:	#f7f7f7;
+
+@theme_sidebar-dark-open-parent:					rgba(60,60,60,0.02);
+
+@theme_sidebar-dark-icon-button-background:			@global-default-background;
+
+@theme_sidebar-dark-icon-button-hover-color:		fade(@theme_sidebar-dark-icon-button-background, 55%);
+@theme_sidebar-dark-icon-button-hover-border:		fade(@theme_sidebar-dark-icon-button-background, 55%);
+@theme_sidebar-dark-icon-button-active-color:		fade(@theme_sidebar-dark-icon-button-background, 35%);
+@theme_sidebar-dark-icon-button-active-border:		fade(@theme_sidebar-dark-icon-button-background, 35%);
+
+//
+// Thumbnail
+//
+
+@theme_thumbnail-border:							fade(@global-muted-color, 15%);

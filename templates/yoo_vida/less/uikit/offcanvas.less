@@ -1,0 +1,54 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Off-canvas
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@offcanvas-z-index:									(@global-z-index + 10);
+@offcanvas-background:								fade(darken(@global-dark-background, 50%), 70%);
+@offcanvas-bar-background:							#fff;
+@offcanvas-panel-margin:							@global-offcanvas-margin;
+@offcanvas-panel-color:								@global-muted-color;
+@offcanvas-panel-title-color:						@offcanvas-panel-link-color;
+@offcanvas-panel-link-color:						@global-color;
+@offcanvas-panel-link-hover-color:					@global-link-color;
+@offcanvas-search-margin:							0;
+@offcanvas-search-background:						rgba(0,0,0,0);
+@offcanvas-search-color:							@global-color;
+@offcanvas-search-placeholder-color:				@offcanvas-panel-color;
+@offcanvas-search-icon-color:						@offcanvas-panel-color;
+
+//
+// New
+//
+
+@offcanvas-divider-padding-horizontal:				@global-offcanvas-margin;
+@offcanvas-search-field-border:						@global-border;
+
+
+// Component
+// ==========================================================================
+
+.hook-offcanvas() {}
+
+
+// Sub-object `uk-offcanvas-bar`
+// ==========================================================================
+
+.hook-offcanvas-bar() {}
+
+
+// Panel in offcanvas
+// ==========================================================================
+
+.hook-offcanvas-panel() {}
+
+
+// Search in offcanvas
+// ==========================================================================
+
+.hook-offcanvas-search-field() { border-bottom: 1px solid @offcanvas-search-field-border; }

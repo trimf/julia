@@ -1,0 +1,69 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Dropdown
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@dropdown-z-index:								@global-z-index;
+@dropdown-width:								250px;
+@dropdown-padding:								35px;
+@dropdown-background:							@global-background;
+@dropdown-color:								@global-color;
+@dropdown-divider-border:						@global-border;
+@dropdown-small-padding:						10px;
+@dropdown-navbar-background:					@dropdown-background;
+@dropdown-navbar-color:							@global-color;
+@dropdown-search-background:					@dropdown-background;
+@dropdown-search-color:							@global-color;
+@dropdown-search-navbar-margin-top:				((@navbar-nav-height - @search-height) / 2);
+@dropdown-search-navbar-margin-right:			-@navbar-nav-padding-horizontal;
+
+//
+// New
+//
+
+@dropdown-border: 						@global-border;
+
+
+// Component
+// ==========================================================================
+
+.hook-dropdown() {
+	padding: (@dropdown-padding - 5px) @dropdown-padding;
+	border: 1px solid @dropdown-border;
+}
+
+
+// Modifier: `uk-dropdown-navbar`
+// ==========================================================================
+
+.hook-dropdown-navbar() {}
+
+
+// Modifier: `uk-dropdown-search`
+// ==========================================================================
+
+.hook-dropdown-search() {}
+
+// Miscellaneous
+// ========================================================================
+
+.hook-dropdown-misc() {
+
+	// Nav in dropdown
+	// ==========================================================================
+
+	body .uk-dropdown .uk-nav,
+	.uk-dropdown .uk-nav.uk-nav-navbar { margin: 0; }
+
+
+	// Modifier `uk-dropdown-small`
+	// ==========================================================================
+
+	.uk-dropdown-small { padding: @dropdown-small-padding (@dropdown-small-padding + 10px) (@dropdown-small-padding + 10px) (@dropdown-small-padding + 10px); }
+
+}

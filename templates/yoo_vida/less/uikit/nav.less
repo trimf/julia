@@ -1,0 +1,339 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Nav
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@nav-padding-horizontal:                            0;
+@nav-header-padding-vertical:                       @nav-padding-vertical;
+@nav-header-padding-horizontal:                     0;
+@nav-header-font-size:                              round(@global-font-size * 0.85);
+@nav-header-margin-top:                             @global-margin;
+@nav-divider-margin-vertical:                       0;
+@nav-divider-margin-horizontal:                     @nav-padding-horizontal;
+@nav-subtitle-font-size:                            round(@global-font-size * 0.85);
+@nav-subtitle-line-height:                          round(@nav-subtitle-font-size * 1.5);
+@nav-sub-padding-vertical:                          10px;
+@nav-sub-padding-left:                              20px;
+@nav-parent-icon-width:                             @global-line-height;
+@nav-side-color:                                    @global-muted-color;
+@nav-side-hover-background:                         @global-transparent-background;
+@nav-side-hover-color:                              @global-dark-color;
+@nav-side-active-background:                        @global-transparent-background;
+@nav-side-active-color:                             @global-dark-color;
+@nav-side-header-color:                             darken(@global-color, 5%);
+@nav-side-divider-border:                           @global-border;
+@nav-side-nested-color:                             @global-muted-color;
+@nav-side-nested-hover-color:                       @global-dark-color;
+@nav-dropdown-color:                                @global-muted-color;
+@nav-dropdown-hover-background:                     @global-transparent-background;
+@nav-dropdown-hover-color:                          @global-dark-color;
+@nav-dropdown-header-color:                         darken(@global-color, 5%);
+@nav-dropdown-divider-border:                       @global-border;
+@nav-dropdown-nested-color:                         @global-muted-color;
+@nav-dropdown-nested-hover-color:                   @global-dark-color;
+@nav-navbar-color:                                  @global-muted-color;
+@nav-navbar-hover-background:                       @global-transparent-background;
+@nav-navbar-hover-color:                            @global-dark-color;
+@nav-navbar-header-color:                           darken(@global-color, 5%);
+@nav-navbar-divider-border:                         @global-border;
+@nav-navbar-nested-color:                           @global-muted-color;
+@nav-navbar-nested-hover-color:                     @global-dark-color;
+@nav-search-color:                                  @global-muted-color;
+@nav-search-active-background:                      @global-transparent-background;
+@nav-search-active-color:                           @global-dark-color;
+@nav-search-header-color:                           darken(@global-color, 5%);
+@nav-search-divider-border:                         @global-border;
+@nav-search-nested-color:                           @global-muted-color;
+@nav-search-nested-hover-color:                     @global-dark-color;
+@nav-offcanvas-color:                               darken(@global-muted-color, 10%);
+@nav-offcanvas-hover-background:                    @global-transparent-background;
+@nav-offcanvas-hover-color:                         @global-dark-color;
+@nav-offcanvas-active-background:                   @global-transparent-background;
+@nav-offcanvas-active-color:                        @global-dark-color;
+@nav-offcanvas-header-color:                        darken(@global-color, 5%);
+@nav-offcanvas-divider-border:                      darken(@offcanvas-bar-background, 10%);
+@nav-offcanvas-nested-color:                        @nav-offcanvas-color;
+@nav-offcanvas-nested-hover-color:                  @offcanvas-panel-link-hover-color;
+
+//
+// Nav
+//
+
+@nav-border:                                        @global-border;
+@nav-divider-height:                                @global-divider-height;
+@nav-dropdown-active-color:                         @global-dark-color;
+@nav-navbar-active-color:                           @global-dark-color;
+@nav-sub-background:                                @global-light-background;
+@nav-side-open-color:                               @global-dark-color;
+@theme-nav-search-padding-vertical:                 15px;
+@nav-search-hover-color:                            @global-dark-color;
+@nav-offcanvas-margin-horizontal:                   @global-offcanvas-margin;
+@nav-offcanvas-padding-small-horizontal:            0;
+@nav-offcanvas-header-margin:                       @global-offcanvas-margin;
+@nav-offcanvas-nav-sub-backround:                   @global-transparent-background;
+
+
+// Component
+// ==========================================================================
+
+
+// Sub-object: `uk-nav-header`
+// ==========================================================================
+
+.hook-nav-header() {}
+
+
+// Sub-object: `uk-nav-divider`
+// ==========================================================================
+
+.hook-nav-divider() { border-width: @nav-divider-height!important; }
+
+// Sub-object: `uk-nav-sub`
+// ==========================================================================
+
+.hook-nav-sub() {
+    padding: @nav-sub-padding-vertical @nav-sub-padding-left;
+    background: @nav-sub-background;
+    border-top: 1px solid @nav-border;
+}
+
+
+// Modifier: `uk-nav-parent-icon`
+// ==========================================================================
+
+.hook-nav-parent-icon() {}
+
+
+// Modifier `uk-nav-side`
+// ==========================================================================
+
+//
+// Items
+//
+
+.hook-nav-side() { border-top: 1px solid @nav-border; }
+
+// Hover
+.hook-nav-side-hover() {}
+
+// Active
+.hook-nav-side-active() {}
+
+//
+// Sub-object: `uk-nav-header`
+//
+
+.hook-nav-side-header() {}
+
+//
+// Sub-object: `uk-nav-divider`
+//
+
+.hook-nav-side-divider() {}
+
+
+// Modifier `uk-nav-dropdown`
+// ==========================================================================
+
+//
+// Items
+//
+
+.hook-nav-dropdown() { border-top: 1px solid @nav-border; }
+
+// Hover
+.hook-nav-dropdown-hover() {}
+
+//
+// Sub-object: `uk-nav-header`
+//
+
+.hook-nav-dropdown-header() {}
+
+//
+// Sub-object: `uk-nav-divider`
+//
+
+.hook-nav-dropdown-divider() {}
+
+
+// Modifier `uk-nav-navbar`
+// ==========================================================================
+
+//
+// Items
+//
+
+.hook-nav-navbar() { border-top: 1px solid @nav-border; }
+
+// Hover
+.hook-nav-navbar-hover() {}
+
+//
+// Sub-object: `uk-nav-header`
+//
+
+.hook-nav-navbar-header() {}
+
+//
+// Sub-object: `uk-nav-divider`
+//
+
+.hook-nav-navbar-divider() {}
+
+
+// Modifier `uk-nav-search`
+// ==========================================================================
+
+//
+// Items
+//
+
+.hook-nav-search() {
+    border-top: 1px solid @nav-border;
+    padding-top: @theme-nav-search-padding-vertical;
+    padding-bottom: @theme-nav-search-padding-vertical;
+
+    &:hover { color: @nav-search-hover-color; }
+}
+
+
+// Active
+.hook-nav-search-active() {}
+
+//
+// Sub-object: `uk-nav-header`
+//
+
+.hook-nav-search-header() {}
+
+//
+// Sub-object: `uk-nav-divider`
+//
+
+.hook-nav-search-divider() {}
+
+
+// Modifier `uk-nav-offcanvas`
+// ==========================================================================
+
+.hook-nav-offcanvas-link() {}
+.hook-nav-offcanvas-link-hover() {}
+
+//
+// Items
+//
+
+.hook-nav-offcanvas() {
+    margin: 0 @nav-offcanvas-margin-horizontal;
+    padding-left: @nav-offcanvas-padding-small-horizontal;
+    padding-right: @nav-offcanvas-padding-small-horizontal;
+    border-top: 1px solid @nav-border;
+}
+
+// Hover
+.hook-nav-offcanvas-hover() {}
+
+// Active
+.hook-nav-offcanvas-active() {}
+
+//
+// Sub-object: `uk-nav-header`
+//
+
+.hook-nav-offcanvas-header() { margin-left: @nav-offcanvas-header-margin; }
+
+//
+// Sub-object: `uk-nav-divider`
+//
+
+.hook-nav-offcanvas-divider() { margin: 0 @offcanvas-divider-padding-horizontal; }
+
+// Miscellaneous
+// ========================================================================
+
+.hook-nav-misc() {
+
+    // Sub-object: `uk-nav-divider`
+    // ==========================================================================
+
+    .uk-nav-divider + li > a { border-top: none; }
+
+    // Sub-object: `uk-nav-sub`
+    // ==========================================================================
+
+    .uk-nav li:last-child .uk-nav-sub { border-bottom: 1px solid @nav-border; }
+
+    // Modifier `uk-nav-side`
+    // ==========================================================================
+
+    //
+    // Items
+    //
+
+    .uk-nav-side > li:first-child > a { border-top: none; }
+
+    // Open
+    .uk-nav-side > .uk-open > a { color: @nav-side-open-color; }
+
+    // Modifier `uk-nav-dropdown`
+    // ==========================================================================
+
+    //
+    // Items
+    //
+
+    .uk-nav-dropdown > li:first-child > a { border-top: none; }
+
+    // Active
+    .uk-nav-dropdown > .uk-active > a { color: @nav-dropdown-active-color; }
+
+
+    // Modifier `uk-nav-navbar`
+    // ==========================================================================
+
+    //
+    // Items
+    //
+
+    .uk-nav-navbar > li:first-child > a { border-top: none; }
+
+    // Active
+    .uk-nav-navbar > li.uk-active > a { color: @nav-navbar-active-color; }
+
+
+    // Modifier `uk-nav-search`
+    // ==========================================================================
+
+    //
+    // Items
+    //
+
+    .uk-nav-search > li:first-child > a { border-top: none; }
+
+
+    // Modifier `uk-nav-offcanvas`
+    // ==========================================================================
+
+    //
+    //Items
+    //
+
+    .uk-nav-offcanvas > li:first-child > a { border-top: none; }
+
+    // Open
+    .uk-nav-offcanvas .uk-nav-sub { 
+        margin-left: @nav-offcanvas-margin-horizontal;
+        margin-right: @nav-offcanvas-margin-horizontal;
+        padding-left: @nav-offcanvas-padding-small-horizontal;
+        background: @nav-offcanvas-nav-sub-backround;
+    }
+
+
+
+}

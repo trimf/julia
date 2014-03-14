@@ -1,0 +1,50 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Icon
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@icon-button-width:								45px;
+@icon-button-height:							@icon-button-width;
+@icon-button-background:						@global-transparent-background;
+@icon-button-font-size:							round(@icon-button-width * 0.54);
+@icon-button-color:								@global-muted-color;
+@icon-button-hover-background:					@global-transparent-background;
+@icon-button-hover-color:						darken(@global-muted-color, 10%);
+@icon-button-active-background:					@global-transparent-background;
+@icon-button-active-color:						darken(@global-muted-color, 20%);
+
+//
+// New
+//
+
+@icon-button-border-width:						3px;
+@icon-button-border:							@global-muted-color;
+@button-border-radius: 							@global-border-radius;
+@icon-button-hover-border:						darken(@global-muted-color, 10%);
+@icon-button-active-border:						darken(@global-muted-color, 20%);
+
+
+// Modifier: `uk-icon-button`
+// ==========================================================================
+
+.hook-icon-button() {
+	border: @icon-button-border-width solid @icon-button-border;
+	line-height: @icon-button-height - (@icon-button-border-width * 2);
+	-webkit-transition: border-color .15s ease-in-out, color .15s ease-in-out;
+	transition: border-color .15s ease-in-out, color .15s ease-in-out;
+}
+
+// Hover
+.hook-icon-button-hover() { border-color: @icon-button-hover-border; }
+
+// Active
+.hook-icon-button-active() { 
+	border-color: @icon-button-active-border;
+	-webkit-transition: border-color .03s ease-in-out;
+	transition: border-color .03s ease-in-out;
+}

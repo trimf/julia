@@ -1,0 +1,111 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,300';
+
+// Variables
+// ========================================================================
+
+//
+// Typography
+//
+
+@global-color:										#8e979c;
+@global-link-color: 								#ff6d6d;
+@global-dark-color: 								#444444;
+
+
+//
+// Backgrounds & Borders
+//
+
+@global-default-background: 						#ff6d6d;
+@global-primary-background:							#72d2c9;
+@global-light-background: 							rgba(65, 65, 70, 0.02);
+@global-success-background:							#72d38f;
+@global-warning-background: 						#ff9b6d;
+@global-danger-background: 							#ff4c47;
+@global-border: 									#ebeeee;
+
+//
+// Panel
+//
+
+@panel-box-primary-background:						#f9fcfc;
+
+//
+// Alert
+//
+
+@alert-color: 										@global-default-background;
+@alert-background: 									fade(@global-default-background, 5%);
+
+
+// Theme Variables
+// ==========================================================================
+
+@theme_global-body-style: 							'salmon';
+
+//
+// Navbar
+//
+
+@theme_navbar-full-background:						none;
+@theme_navbar-full-box-shadow:						none;
+@theme_navbar-box-shadow:							inset -1px 0 0 @global-border,
+													0 1px 0 rgba(60,60,60,0.1),
+													inset 1px 0 0 @global-border;
+
+@theme_navbar-nav-border-1-color: 					#ff886e;
+@theme_navbar-nav-border-2-color:					#ff9a60;
+@theme_navbar-nav-border-3-color:					#f2d161;
+@theme_navbar-nav-border-4-color:					#a6de7d;
+@theme_navbar-nav-border-5-color:					#7dbade;
+@theme_navbar-nav-border-6-color:					#7d94de;
+
+//
+// Container Border
+//
+
+@theme_container-border-right:						@global-border;
+
+//
+// Article
+//
+
+@theme_article-meta-background: 					#cbd4d8;
+@theme-article-date:								@theme_article-meta-background;
+
+//
+// Sidebar Dark
+//
+
+@theme_sidebar-dark-fallback-background: 			#fafcfc;
+@theme_sidebar-dark-gradient-left-background:		#fafcfc;
+@theme_sidebar-dark-gradient-right-background:		@theme_sidebar-dark-gradient-left-background;
+
+@theme_sidebar-dark-vertical-border-width: 			1px;
+
+@theme_sidebar-dark-panel-box-background:			#fafcfc;
+@theme_sidebar-dark-panel-box-primary-background:	#f5f9fa;
+
+
+@theme_sidebar-dark-muted-color:					#d3dce1;
+
+@theme_thumbnail-border: 							fade(@theme_sidebar-dark-muted-color, 25%);
+
+@theme_sidebar-dark-nav-side-link-color:			@global-muted-color;
+
+@theme_sidebar-dark-open-parent:					rgba(200,215,220,0.1);
+
+@theme_sidebar-dark-icon-button-background:			@theme_sidebar-dark-muted-color;
+
+@theme_sidebar-dark-icon-button-hover-color:		darken(@theme_sidebar-dark-icon-button-background, 12%);
+@theme_sidebar-dark-icon-button-hover-border:		darken(@theme_sidebar-dark-icon-button-background, 12%);
+@theme_sidebar-dark-icon-button-active-color:		darken(@theme_sidebar-dark-icon-button-background, 20%);
+@theme_sidebar-dark-icon-button-active-border:		darken(@theme_sidebar-dark-icon-button-background, 20%);
+
+//
+// Toolbar
+//
+
+@theme_toolbar-background:							none;
