@@ -1,7 +1,7 @@
 <?php
 defined('_AKEEBA_RESTORATION') or die('Restricted access');
 $restoration_setup = array(
-	'kickstart.security.password' => 'XZxkIfCvXkSzb8FZ9Ju4ZsDpccXewg3C',
+	'kickstart.security.password' => 'q06bkCxiaKLXjrR7vE3tROYH4bHKRWZ3',
 	'kickstart.tuning.max_exec_time' => '5',
 	'kickstart.tuning.run_time_bias' => '75',
 	'kickstart.tuning.min_exec_time' => '0',

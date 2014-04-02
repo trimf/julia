@@ -1,11 +1,4 @@
 <?php
-/**
-* @package   Warp Theme Framework
-* @author    YOOtheme http://www.yootheme.com
-* @copyright Copyright (C) YOOtheme GmbH
-* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
-*/
-
 return array(
 
     'helper' => array(
@@ -38,6 +31,6 @@ return array(
         'subnav' => 'Warp\Menu\Subnav'
     ),
 
-    'branding' => 'Powered by <a href="http://www.yootheme.com">Warp Theme Framework</a>'
+    'branding' => 'Copyright © 2014 Foggy Elm All Rights Reserved.'
 
 );
