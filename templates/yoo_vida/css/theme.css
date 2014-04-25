@@ -6537,6 +6537,11 @@ h6 {
 .tm-noblog .tm-content {
   padding: 30px 30px 0;
 }
+
+.tm-content p{
+  text-indent: 30px;
+}
+
 .tm-footer {
   position: relative;
   padding: 30px;

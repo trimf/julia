@@ -8,7 +8,7 @@
 		<?php endif; ?>
 	<?php endif; ?>
 
-	<?php if ($title) : ?>
+	<?php if (($title)&&!($title==="Главная")) : ?>
 	<h1 class="uk-article-title">
 		<?php if ($url && $title_link) : ?>
 			<a href="<?php echo $url; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a>
@@ -44,7 +44,7 @@
 	</p>
 	<?php endif; ?>
 
-	<?php if ($author || $date || $category) : ?>
+<!-- 	<?php if ($author || $date || $category) : ?>
 	<div class="tm-article-meta">
 
 		<?php if ($date) : ?>
@@ -70,7 +70,7 @@
 		<?php endif; ?>
 
 	</div>
-	<?php endif; ?>
+	<?php endif; ?> -->
 
 	<?php if ($edit) : ?>
 	<p><?php echo $edit; ?></p>

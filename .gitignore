@@ -1,5 +1,8 @@
 cache/
 
+# ============ #
+# OS generated #
+# ============ #
 .DS_Store
 .DS_Store?
 ._*
